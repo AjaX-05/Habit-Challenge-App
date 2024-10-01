@@ -80,7 +80,9 @@ function authenticateWebToken(req, res, next) {
 }
 
 mongoose
-  .connect("CONNSTRING")
+  .connect
+  // ""
+  ()
   .then(() => {
     console.log("Connected to DB");
     app.listen(5001, () => {
